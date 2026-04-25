@@ -1,0 +1,34 @@
+backend:
+  name: git-gateway
+  branch: main
+
+media_folder: "images"
+
+collections:
+
+  - name: "sobre"
+    label: "Sobre"
+    files:
+      - file: "data/sobre.json"
+        label: "Sobre Mim"
+        name: "sobre"
+        fields:
+          - {label: "Texto", name: "texto", widget: "text"}
+          - {label: "Contacto", name: "contacto", widget: "string"}
+
+  - name: "experiencia"
+    label: "Experiência"
+    folder: "data/experiencia"
+    create: true
+    fields:
+      - {label: "Cargo", name: "cargo", widget: "string"}
+      - {label: "Empresa", name: "empresa", widget: "string"}
+      - {label: "Ano", name: "ano", widget: "string"}
+
+  - name: "projetos"
+    label: "Projetos"
+    folder: "data/projetos"
+    create: true
+    fields:
+      - {label: "Nome", name: "nome", widget: "string"}
+      - {label: "Descrição", name: "descricao", widget: "text"}
