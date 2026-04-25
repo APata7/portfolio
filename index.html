@@ -3,43 +3,145 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>António Pata</title>
+<title>António Pata — Formador & Programador</title>
+<meta name="description" content="Portfólio de António Pata. Formador, Diretor de Curso e Programador. Construo experiências de aprendizagem e software à medida.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght,SOFT,WONK@0,9..144,300..900,0..100,0..1;1,9..144,300..900,0..100,0..1&family=Manrope:wght@300..800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-<button id="toggle-theme">🌙</button>
+<div class="grain" aria-hidden="true"></div>
 
-<div class="container">
+<button id="toggle-theme" type="button" aria-label="Alternar tema">
+  <span class="t-icon t-sun" aria-hidden="true">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round">
+      <circle cx="12" cy="12" r="4"/><path d="M12 3v1.5M12 19.5V21M3 12h1.5M19.5 12H21M5.6 5.6l1.1 1.1M17.3 17.3l1.1 1.1M5.6 18.4l1.1-1.1M17.3 6.7l1.1-1.1"/>
+    </svg>
+  </span>
+  <span class="t-icon t-moon" aria-hidden="true">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round">
+      <path d="M20 14.5A8 8 0 0 1 9.5 4 8 8 0 1 0 20 14.5z"/>
+    </svg>
+  </span>
+</button>
 
-<aside class="sidebar">
-    <h1>António Pata</h1>
-    <p>Formador & Programador</p>
+<div class="shell">
 
-    <a href="cv.pdf" download class="btn">📄 Download CV</a>
+  <aside class="sidebar">
+    <div class="sidebar-inner">
+      <div class="brand">
+        <span class="brand-mark" aria-hidden="true">AP</span>
+        <span class="brand-meta">
+          <em>portfólio</em>
+          <span>vol. 01 · 2026</span>
+        </span>
+      </div>
 
-    <div id="contacto"></div>
-    <div id="links"></div>
-</aside>
+      <h1 class="display">
+        <span>António</span>
+        <span class="display-italic">Pata.</span>
+      </h1>
 
-<main>
+      <p class="role">
+        <span class="role-tag">Formador</span>
+        <span class="role-amp">&</span>
+        <span class="role-tag">Programador</span>
+      </p>
 
-<section class="card">
-    <h2>Sobre Mim</h2>
-    <p id="sobre"></p>
-</section>
+      <p class="lede">
+        Ensino programação e construo software que tem mesmo de funcionar &mdash; entre uma sala de aula em Braga e um terminal aberto.
+      </p>
 
-<section class="card">
-    <h2>Experiência</h2>
-    <div id="experiencia" class="timeline"></div>
-</section>
+      <a href="Curriculum_Vitae_AntonioPata_pt1.pdf" download class="btn">
+        <span>Descarregar CV</span>
+        <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 4v12m0 0l-4-4m4 4l4-4"/><path d="M5 20h14"/></svg>
+      </a>
 
-<section class="card">
-    <h2>Projetos</h2>
-    <div id="projetos"></div>
-</section>
+      <nav class="dock" aria-label="Secções">
+        <a href="#sobre"><span>01</span> Sobre</a>
+        <a href="#experiencia"><span>02</span> Experiência</a>
+        <a href="#projetos"><span>03</span> Projetos</a>
+        <a href="#contacto"><span>04</span> Contacto</a>
+      </nav>
 
-</main>
+      <footer class="sidebar-foot">
+        <span class="dot" aria-hidden="true"></span>
+        <span id="status">disponível para projetos</span>
+      </footer>
+    </div>
+  </aside>
+
+  <main>
+
+    <section id="sobre" class="block block-sobre" data-reveal>
+      <header class="block-head">
+        <span class="block-num">01</span>
+        <h2>Sobre</h2>
+        <span class="block-rule" aria-hidden="true"></span>
+      </header>
+      <p id="sobre-texto" class="prose">
+        <span class="skeleton skeleton-line"></span>
+        <span class="skeleton skeleton-line"></span>
+        <span class="skeleton skeleton-line w-60"></span>
+      </p>
+      <ul class="chips" id="sobre-chips" aria-label="Áreas de atuação">
+        <li>didática</li>
+        <li>python</li>
+        <li>web</li>
+        <li>flask</li>
+        <li>bases de dados</li>
+        <li>git</li>
+      </ul>
+    </section>
+
+    <section id="experiencia" class="block" data-reveal>
+      <header class="block-head">
+        <span class="block-num">02</span>
+        <h2>Experiência</h2>
+        <span class="block-rule" aria-hidden="true"></span>
+      </header>
+      <ol id="experiencia" class="timeline" aria-live="polite">
+        <li class="timeline-item is-skeleton">
+          <span class="skeleton skeleton-pill"></span>
+          <span class="skeleton skeleton-line w-40"></span>
+          <span class="skeleton skeleton-line w-30"></span>
+        </li>
+      </ol>
+    </section>
+
+    <section id="projetos" class="block" data-reveal>
+      <header class="block-head">
+        <span class="block-num">03</span>
+        <h2>Projetos</h2>
+        <span class="block-rule" aria-hidden="true"></span>
+      </header>
+      <div id="projetos-list" class="projetos">
+        <article class="projeto is-skeleton">
+          <span class="skeleton skeleton-line w-50"></span>
+          <span class="skeleton skeleton-line"></span>
+          <span class="skeleton skeleton-line w-70"></span>
+        </article>
+      </div>
+    </section>
+
+    <section id="contacto" class="block block-contact" data-reveal>
+      <header class="block-head">
+        <span class="block-num">04</span>
+        <h2>Contacto</h2>
+        <span class="block-rule" aria-hidden="true"></span>
+      </header>
+      <p class="contact-lede">Sem formulários. Sem intermediários. Escreve diretamente.</p>
+      <div id="contacto-list" class="contact-list"></div>
+    </section>
+
+    <footer class="page-foot">
+      <span>&copy; <span id="year"></span> António Pata</span>
+      <span class="page-foot-mark">&mdash; feito à mão em Portugal</span>
+    </footer>
+
+  </main>
 </div>
 
 <script src="script.js"></script>
