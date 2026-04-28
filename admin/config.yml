@@ -1,5 +1,6 @@
 backend:
-  name: git-gateway
+  name: github
+  repo: APata7/O-meu-Portif-lio
   branch: main
 
 media_folder: "images"
