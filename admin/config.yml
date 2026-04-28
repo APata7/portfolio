@@ -4,6 +4,7 @@ backend:
   branch: main
 
 media_folder: "images"
+public_folder: "/images"
 
 collections:
 
@@ -21,6 +22,8 @@ collections:
     label: "Experiência"
     folder: "data/experiencia"
     create: true
+    slug: "{{slug}}"
+    format: "json"
     fields:
       - {label: "Cargo", name: "cargo", widget: "string"}
       - {label: "Empresa", name: "empresa", widget: "string"}
@@ -30,6 +33,8 @@ collections:
     label: "Projetos"
     folder: "data/projetos"
     create: true
+    slug: "{{slug}}"
+    format: "json"
     fields:
       - {label: "Nome", name: "nome", widget: "string"}
       - {label: "Descrição", name: "descricao", widget: "text"}
