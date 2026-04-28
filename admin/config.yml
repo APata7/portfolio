@@ -1,6 +1,6 @@
 backend:
   name: github
-  repo: APata7/O-meu-Portif-lio
+  repo: APata7/portfolio
   branch: main
 
 media_folder: "images"
