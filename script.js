@@ -28,7 +28,7 @@ const escapeHtml = (s = "") => String(s).replace(/[&<>"']/g, c => ({
 }[c]));
 
 // SOBRE
-fetch("/data/sobre.json")
+fetch("data/sobre.json")
   .then(r => r.json())
   .then(d => {
     const sobre = document.getElementById("sobre-texto");
@@ -56,7 +56,7 @@ fetch("/data/sobre.json")
   });
 
 // EXPERIÊNCIA
-fetch("/data/experiencia")
+fetch("data/experiencia")
   .then(r => r.json())
   .then(data => {
     const list = document.getElementById("experiencia");
@@ -85,7 +85,7 @@ fetch("/data/experiencia")
   });
 
 // PROJETOS
-fetch("/data/projetos")
+fetch("data/projetos")
   .then(r => r.json())
   .then(data => {
     const list = document.getElementById("projetos-list");
