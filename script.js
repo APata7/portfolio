@@ -106,3 +106,27 @@ fetch("/data/projetos")
     document.getElementById("projetos-list").innerHTML =
       `<article class="projeto"><p class="projeto-desc">Não foi possível carregar os projetos.</p></article>`;
   });
+// ... teu código original ...
+
+// Adiciona scroll suave para links do dock
+document.querySelectorAll('.dock a').forEach(link => {
+  link.addEventListener('click', (e) => {
+    e.preventDefault();
+    const target = document.querySelector(link.getAttribute('href'));
+    target?.scrollIntoView({ behavior: 'smooth', block: 'start' });
+  });
+});
+
+// Detecta se está disponível baseado na hora (opcional)
+function updateStatus() {
+  const now = new Date();
+  const hour = now.getHours();
+  const status = document.getElementById('status');
+  if (hour >= 9 && hour <= 18) {
+    status.textContent = 'disponível para projetos';
+  } else {
+    status.textContent = 'fora do horário comercial';
+  }
+}
+updateStatus();
+setInterval(updateStatus, 60000);
