@@ -59,7 +59,7 @@ fetch("data/sobre.json")
 fetch("/data/experiencia/index.json")
   .then(r => r.json())
   .then(data => {
-    const list = document.getElementById("experiencia");
+    const list = document.getElementById("experiencia-list");
     if (!Array.isArray(data) || data.length === 0) {
       list.innerHTML = `<li class="timeline-item"><span class="timeline-empresa">Sem experiências para mostrar.</span></li>`;
       return;
