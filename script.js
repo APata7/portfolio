@@ -56,7 +56,7 @@ fetch("data/sobre.json")
   });
 
 // EXPERIÊNCIA
-fetch("/data/experiencia/index.json")
+fetch("data/experiencia/index.json")
   .then(r => r.json())
   .then(data => {
     const list = document.getElementById("experiencia-list");
