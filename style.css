@@ -636,8 +636,8 @@ main {
     margin-bottom: 0;
   }
   .profile-photo img {
-    width: 100px;
-    height: 100px;
+    width: 120px;
+    height: 120px;
   }
   main { padding: 28px 0 28px; }
   .display { font-size: clamp(48px, 14vw, 72px); }
