@@ -670,3 +670,80 @@ main {
   }
   html { scroll-behavior: auto; }
 }
+/* =========================================
+   AJUSTES FINAIS - LEITURA E POLIMENTO
+   ========================================= */
+
+/* Texto principal justificado */
+.prose,
+.projeto-desc,
+.timeline-body p,
+.contact-lede {
+  text-align: justify;
+}
+
+/* Melhor leitura dos parágrafos */
+.prose {
+  line-height: 1.7;
+  margin-bottom: 30px;
+}
+
+/* Melhor leitura nas descrições */
+.projeto-desc,
+.timeline-body p {
+  line-height: 1.65;
+}
+
+/* Destaque de palavras importantes */
+strong {
+  color: var(--accent);
+  font-weight: 700;
+}
+
+/* Botões sociais mais alinhados */
+.social-buttons .btn {
+  justify-content: center;
+  min-width: 190px;
+}
+
+/* Ícones dentro dos botões */
+.social-buttons .btn svg {
+  flex-shrink: 0;
+}
+
+/* Melhor aspeto dos chips/competências */
+.chips li {
+  background: var(--surface);
+  padding: 8px 14px;
+  border-radius: 999px;
+}
+
+/* Melhor espaçamento entre blocos */
+.block {
+  margin-bottom: 8px;
+}
+
+/* Contactos mais legíveis */
+.contact-value {
+  word-break: break-word;
+}
+
+/* Ajustes para telemóvel */
+@media (max-width: 560px) {
+  .prose,
+  .projeto-desc,
+  .timeline-body p,
+  .contact-lede {
+    text-align: left;
+  }
+
+  .social-buttons .btn {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .role {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+}
