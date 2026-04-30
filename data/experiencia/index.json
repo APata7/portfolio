@@ -1,7 +1,32 @@
 [
-   {
-    "cargo": "Formador e Diretor de Curso",
-    "empresa": "INTEP",
-    "ano": "2023 - Presente"
+  {
+    "ano": "2023 - 2025",
+    "cargo": "Formador e Diretor do Curso de Programador/a de Informática",
+    "empresa": "Escola Profissional da Figueira da Foz - INTEP",
+    "descricao": "Lecionação de módulos de programação, Python, C/C++, SQL, ASP.NET Core MVC, bases de dados, sistemas operativos, análise de sistemas, segurança no desenvolvimento de software e orientação da FCT e PAP."
+  },
+  {
+    "ano": "2021 - 2025",
+    "cargo": "Formador em Informática, Excel, E-learning e Competências Digitais",
+    "empresa": "Novotecna, EDICAD, AIP, Estratégia Integrada, AEDL e outras entidades",
+    "descricao": "Formação em folha de cálculo, Excel avançado, Power Query, Power Pivot, cibersegurança, criação de páginas web, TIC, Moodle, plataformas colaborativas e ferramentas digitais."
+  },
+  {
+    "ano": "2021 - 2022",
+    "cargo": "Formador em Eletrónica/Eletrotecnia",
+    "empresa": "Escola Profissional e de Desenvolvimento Rural do Baixo Mondego",
+    "descricao": "Lecionação de módulos de eletrónica, eletrónica de potência, sistemas lógicos, automatismos e tecnologias de processo."
+  },
+  {
+    "ano": "2014 - 2016",
+    "cargo": "Engenheiro/Técnico Eletrotécnico",
+    "empresa": "Grupo Somitel / Eneradd / Somitel Energia",
+    "descricao": "Trabalho técnico em estudos luminotécnicos, tecnologia LED, autoconsumo, microprodução fotovoltaica e qualificação de luminárias de iluminação pública."
+  },
+  {
+    "ano": "2008 - 2017",
+    "cargo": "Docente de TIC",
+    "empresa": "Ensino público",
+    "descricao": "Lecionação de TIC e Introdução às Tecnologias de Informação e Comunicação em contexto escolar."
   }
 ]
