@@ -747,3 +747,76 @@ strong {
     justify-content: center;
   }
 }
+/* =========================================
+   CORREÇÕES FINAIS DE LAYOUT
+   ========================================= */
+
+/* 1. Nome António Pata seguido */
+.display span {
+  display: inline;
+}
+
+.display {
+  line-height: 1;
+  margin-bottom: 10px;
+}
+
+/* 2. Botões lado a lado */
+.social-buttons {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 12px;
+  align-items: center;
+}
+
+.social-buttons .btn {
+  min-width: auto;
+  width: auto;
+  justify-content: center;
+}
+
+/* 3. Justificar texto do Sobre Mim */
+#sobre-texto {
+  display: block;
+  text-align: justify !important;
+  text-align-last: left;
+  line-height: 1.7;
+}
+
+/* Justificar também descrições */
+.prose,
+.projeto-desc,
+.timeline-body p,
+.contact-lede {
+  text-align: justify !important;
+}
+
+/* 4. Ajuste em telemóvel */
+@media (max-width: 768px) {
+  .display span {
+    display: inline;
+  }
+
+  .social-buttons {
+    justify-content: center;
+  }
+}
+
+@media (max-width: 560px) {
+  .social-buttons {
+    flex-direction: column;
+  }
+
+  .social-buttons .btn {
+    width: 100%;
+  }
+
+  #sobre-texto,
+  .prose,
+  .projeto-desc,
+  .timeline-body p,
+  .contact-lede {
+    text-align: left !important;
+  }
+}
