@@ -820,3 +820,136 @@ strong {
     text-align: left !important;
   }
 }
+/* =========================================
+   REFINAMENTO FINAL DA SIDEBAR
+   ========================================= */
+
+/* Nome seguido e mais elegante */
+.display {
+  font-size: clamp(46px, 5.8vw, 76px);
+  line-height: 1;
+  margin: 8px 0 6px;
+  letter-spacing: -0.04em;
+}
+
+.display span {
+  display: inline;
+}
+
+.display-italic::before {
+  content: " ";
+}
+
+/* Frase curta abaixo do nome */
+.headline-mini {
+  margin: 0;
+  font-family: var(--mono);
+  font-size: 12px;
+  letter-spacing: .11em;
+  text-transform: uppercase;
+  color: var(--text-dim);
+  line-height: 1.6;
+  max-width: 38ch;
+}
+
+/* Foto maior e mais premium */
+.profile-photo {
+  margin-bottom: 18px;
+  margin-top: 10px;
+}
+
+.profile-photo img {
+  width: 165px;
+  height: 165px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 4px solid color-mix(in oklab, var(--accent) 45%, var(--line));
+  box-shadow:
+    0 0 0 8px color-mix(in oklab, var(--accent) 10%, transparent),
+    var(--shadow);
+}
+
+.profile-photo img:hover {
+  transform: scale(1.06);
+}
+
+/* Role tags mais compactas */
+.role {
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.role-tag {
+  padding: 5px 11px;
+  font-size: 11px;
+}
+
+/* Botões em linha e mais limpos */
+.social-buttons {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin: 18px 0 10px;
+}
+
+.social-buttons .btn {
+  width: auto;
+  min-width: auto;
+  padding: 12px 16px;
+  justify-content: center;
+}
+
+/* Menu mais discreto */
+.dock {
+  margin-top: 18px;
+}
+
+.dock a {
+  padding: 8px 0;
+}
+
+/* Melhor leitura do texto principal */
+#sobre-texto,
+.prose,
+.projeto-desc,
+.timeline-body p,
+.contact-lede {
+  text-align: justify !important;
+  line-height: 1.75;
+}
+
+/* Evitar justificação feia no telemóvel */
+@media (max-width: 560px) {
+  #sobre-texto,
+  .prose,
+  .projeto-desc,
+  .timeline-body p,
+  .contact-lede {
+    text-align: left !important;
+  }
+
+  .display {
+    text-align: center;
+    font-size: clamp(42px, 14vw, 62px);
+  }
+
+  .headline-mini {
+    text-align: center;
+    max-width: none;
+  }
+
+  .profile-photo img {
+    width: 130px;
+    height: 130px;
+  }
+
+  .social-buttons {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .social-buttons .btn {
+    width: 100%;
+  }
+}
