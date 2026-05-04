@@ -3,6 +3,7 @@ backend:
   repo: APata7/portfolio
   branch: main
   base_url: https://sveltia-cms-auth.antoniopata7.workers.dev
+  auth_endpoint: auth
 
 media_folder: "images"
 public_folder: "/images"
