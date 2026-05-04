@@ -82,3 +82,103 @@ function updateStatus() {
 
 updateStatus();
 setInterval(updateStatus, 60000);
+function escapeHtml(text = "") {
+  return String(text).replace(/[&<>"']/g, (char) => ({
+    "&": "&amp;",
+    "<": "&lt;",
+    ">": "&gt;",
+    '"': "&quot;",
+    "'": "&#039;"
+  }[char]));
+}
+
+async function loadJSON(path) {
+  const response = await fetch(path);
+  if (!response.ok) {
+    throw new Error(`Erro ao carregar ${path}`);
+  }
+  return response.json();
+}
+
+async function carregarConteudos() {
+  try {
+    const sobre = await loadJSON("data/sobre.json");
+    const sobreEl = document.getElementById("sobre-texto");
+    if (sobreEl) sobreEl.textContent = sobre.texto;
+
+    const destaques = await loadJSON("data/destaques.json");
+    const destaquesEl = document.getElementById("destaques-list");
+    if (destaquesEl) {
+      destaquesEl.innerHTML = destaques.items
+        .map(item => `<li>${escapeHtml(item.texto)}</li>`)
+        .join("");
+    }
+
+    const experiencia = await loadJSON("data/experiencia.json");
+    const experienciaEl = document.getElementById("experiencia-list");
+    if (experienciaEl) {
+      experienciaEl.innerHTML = experiencia.items.map(item => `
+        <li class="timeline-item">
+          <span class="timeline-year">${escapeHtml(item.ano)}</span>
+          <div class="timeline-body">
+            <span class="timeline-cargo">${escapeHtml(item.cargo)}</span>
+            <span class="timeline-empresa">${escapeHtml(item.empresa)}</span>
+            <p class="projeto-desc">${escapeHtml(item.descricao)}</p>
+          </div>
+        </li>
+      `).join("");
+    }
+
+    const competencias = await loadJSON("data/competencias.json");
+    const competenciasEl = document.getElementById("competencias-list");
+    if (competenciasEl) {
+      competenciasEl.innerHTML = competencias.items
+        .map(item => `<li>${escapeHtml(item.texto)}</li>`)
+        .join("");
+    }
+
+    const formacao = await loadJSON("data/formacao.json");
+    const formacaoEl = document.getElementById("formacao-list");
+    if (formacaoEl) {
+      formacaoEl.innerHTML = formacao.items.map(item => `
+        <li class="timeline-item">
+          <span class="timeline-year">${escapeHtml(item.ano)}</span>
+          <div class="timeline-body">
+            <span class="timeline-cargo">${escapeHtml(item.curso)}</span>
+            <span class="timeline-empresa">${escapeHtml(item.entidade)}</span>
+          </div>
+        </li>
+      `).join("");
+    }
+
+    const projetos = await loadJSON("data/projetos.json");
+    const projetosEl = document.getElementById("projetos-list");
+    if (projetosEl) {
+      projetosEl.innerHTML = projetos.items.map((item, index) => `
+        <article class="projeto">
+          <div class="projeto-head">
+            <h3 class="projeto-nome">${escapeHtml(item.nome)}</h3>
+            <span class="projeto-num">${String(index + 1).padStart(2, "0")}</span>
+          </div>
+          <p class="projeto-desc">${escapeHtml(item.descricao)}</p>
+        </article>
+      `).join("");
+    }
+
+    const disponivel = await loadJSON("data/disponivel.json");
+    const disponivelEl = document.getElementById("disponivel-list");
+    if (disponivelEl) {
+      disponivelEl.innerHTML = disponivel.items.map(item => `
+        <li>
+          <strong>${escapeHtml(item.titulo)}</strong><br>
+          ${escapeHtml(item.descricao)}
+        </li>
+      `).join("");
+    }
+
+  } catch (error) {
+    console.error("Erro ao carregar conteúdos:", error);
+  }
+}
+
+carregarConteudos();

@@ -1,0 +1,15 @@
+{
+  "items": [
+    { "texto": "Python" },
+    { "texto": "C/C++" },
+    { "texto": "HTML" },
+    { "texto": "CSS" },
+    { "texto": "SQL" },
+    { "texto": "ASP.NET Core MVC" },
+    { "texto": "Excel Avançado" },
+    { "texto": "Power Query" },
+    { "texto": "Moodle" },
+    { "texto": "Eletrónica" },
+    { "texto": "E-learning" }
+  ]
+}
